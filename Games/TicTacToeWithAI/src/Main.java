@@ -62,8 +62,7 @@ public class Main {
                 System.out.println("Bad parameters!");
                 continue;
             }
-            boolean valid = true;
-            if (!args[0].equals("start")) valid = false;
+            boolean valid = args[0].equals("start");
 
 
             if (!args[1].equals("easy") && !args[1].equals("medium") && !args[1].equals("hard")

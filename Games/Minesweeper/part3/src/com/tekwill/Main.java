@@ -1,7 +1,5 @@
 package com.tekwill;
-/**
- * Stage 3/5: Look around you
- */
+
 import java.util.Scanner;
 
 public class Main {

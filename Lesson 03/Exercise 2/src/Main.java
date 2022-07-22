@@ -1,7 +1,7 @@
 public class Main {
     /**
-     * Java Fundamentals
-     * @param args
+     * Invalid declaration of variables
+     *
      */
     public static void main(String[] args) {
         /*
@@ -25,6 +25,5 @@ public class Main {
         System.out.println("double d = " + d);
         System.out.println("char c = " + c);
         System.out.println("boolean bool = " + bool);
-
     }
 }

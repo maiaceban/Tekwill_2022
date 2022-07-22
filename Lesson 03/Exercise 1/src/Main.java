@@ -1,8 +1,6 @@
 public class Main {
     /**
-     * Java Fundamentals
-     *
-     * @param args
+     * Assignments
      */
     public static void main(String[] args) {
         /*

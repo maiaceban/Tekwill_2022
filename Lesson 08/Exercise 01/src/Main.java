@@ -2,7 +2,6 @@ import java.util.Scanner;
 /**
  * Extracts the integer part of the given double value.
  *
- * @return the integer part
  */
     /*
     Given the method named extractInt that takes a double value and returns an integer value.

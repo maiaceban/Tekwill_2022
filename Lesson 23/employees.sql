@@ -10,6 +10,7 @@ select
 select
 	substr('hello, My name is Maia', 19, 4); -- it returns 'Maia'
 
+	
 -- Logic expressions
 select ((true and true) and (not false)) or false; -- it returns '[true]' 
 select ((true and true) and (not true)) or false;  -- it returns '[false]' 

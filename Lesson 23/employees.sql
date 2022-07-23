@@ -15,18 +15,56 @@ select
 select ((true and true) and (not false)) or false; -- it returns '[true]' 
 select ((true and true) and (not true)) or false;  -- it returns '[false]' 
 
+--
 select
-	'Alice' as name,
-	170 as height_in_centimerters,
+	'Alice'        as name,
+	170            as height_in_centimerters,
 	170 * 0.393701 as "height in inches";
 select
-	'BOB' as NAME,
-	160 as "HEIGHT IN CENTIMETERS",
+	'BOB'          as NAME,
+	160            as "HEIGHT IN CENTIMETERS",
 	160 * 0.393701 as "HEIGHT IN INCHES";
 
+--
+select
+	concat(first_name, ' ' , last_name) as nume,
+	age as varsta,
+	age * 2000 as salariu,
+	first_name = 'Ranna' "is Ranna"
+from
+	employees;
+
+
+-- Ex 23.7 Where employees
+-- 1. select all emloyees that are younger than 45
 select * from employees where age < 45;
-select * from employees where  first_name = 'Lauren' or last_name = 'Beaulieu';
+-- 2. select all employees that have first name 'Lauren' or last name 'Beaulieu'
+select * from employees where first_name = 'Lauren' or  last_name = 'Beaulieu';
+-- 3. select all employees that are older than 60 or younger than 20
 select * from employees where age > 60 or age < 20;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -- Ex 23.8 Order by DESC and ASC
 select * from employees order by age desc;
@@ -60,8 +98,6 @@ create table if not exists departments (
 department_id int not null,
 department_name varchar(20)
 );
-
-
 
 -- Ex 23.13 Department table constraints - adding a new column to the existing table
 select * from employees;

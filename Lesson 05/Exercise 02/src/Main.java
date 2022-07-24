@@ -11,10 +11,7 @@ public class Main {
         from 250 to 999: zounds
         1000 and more: legion
         The program should read the number of units and output the corresponding category.
-            Sample Input 1: 5
-            Sample Output 1: pack
-            Sample Input 2: 303
-            Sample Output 2: zounds
+
          */
         Scanner sc = new Scanner(System.in);
         int army = sc.nextInt();

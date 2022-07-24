@@ -1,8 +1,5 @@
 import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        /*
+/*
         In a computer game, each gamer has an army of units. Write a program that will
         classify the army corresponding to the following rules:
         less than 1: no army
@@ -13,6 +10,8 @@ public class Main {
         The program should read the number of units and output the corresponding category.
 
          */
+public class Main {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int army = sc.nextInt();
 

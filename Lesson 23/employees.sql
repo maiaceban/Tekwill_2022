@@ -90,12 +90,52 @@ select * from employees;
 alter table employees add column department_id int;
 
 -- Ex 23.14 Department table consistency constrains 
-select * from departments d;
+select * from departments;
+-- 1. department_d int should be UNIQUE and NOT NULL
 alter table departments add constraint department_id_key unique (department_id); 
 alter table departments alter column department_id set not null;
-
+-- 2. Department_name VACHAR(20) should be NOT NUL and DEFAULT 'Unknouwn'
 alter table departments alter column department_name set not null;
 alter table departments alter column department_name set default 'Unknown';
+
+-- Ex 23.15 Primary keys
+-- 1. delecte all constraints on department_id column from departments table
+select * from departments;
+alter table departments drop constraint department_id;
+-- 2. Set department_id from departments table to be the primary key
+alter table departments add primary key (depatment_id);
+-- 3. Set personal_id from employees table to be the primary key
+alter table employees add primary key (personal_id);
+
+-- Ex 23.16 Foreign Keys
+-- 1. Create a new table: addresses with columns:
+/*
+ * 2. Add a foreign key to addresses table to connect it with employees table and set the
+ * action CASCADE for update and delete
+ */ 
+create table if not exists addresses (
+id int primary key,
+street varchar(225) not null,
+city varchar(60) not null,
+zip_code varchar(20),
+employee_id int unique,
+constraint fk_employee foreign key (employee_id)
+references employees (id)
+on delete cascade 
+on update cascade 
+);
+ 
+select * from addresses;
+insert into addresses (id, street, city, zip_code, employee_id)
+values (202, 'Stefan cel Mare', 'Straseni', '2052', 202);
+
+
+
+
+
+
+
+
 
 
 

@@ -15,3 +15,9 @@ The program should print a text description of the object to which each array el
 	a. Methods getArea() and getPerimeter()
 5. Create classes Cube, Sphere and Tetrahedron from ThreeDimensionalShape with:
 	a. Methods getArea() and getVolume()
+
+Test:
+Create 12 objects 2 of each type. 
+Create a method to print the areas of an object and print all areas for those objects. 
+Implement a method that prints perimeter for a 2d object and print perimeters for all 2d objects. 
+Implement a method that prints volume for 3d objects and print volumes for all 3d objects.

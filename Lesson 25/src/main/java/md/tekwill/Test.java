@@ -6,16 +6,17 @@ import java.sql.SQLException;
 
 public class Test {
     public static void main(String[] args) {
-        String url= "jdbc:postgresql://localhost:5432/tekwill_demo_db";
+        String url = "jdbc:postgresql://localhost:5432/tekwill_demo_db";
         String username = "tekwill";
         String password = "tekwill";
 
-        try{
+        try {
             Connection connection = DriverManager.getConnection(url, username, password);
-            if (connection.isValid(5)){
+            if (connection.isValid(5)) {
                 System.out.println("Connection is valid");
             }
-        } catch (SQLException e){
+            //  connection.close(); -----> opreste conexiunea la baza de date
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

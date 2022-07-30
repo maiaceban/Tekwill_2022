@@ -1,5 +1,8 @@
 package md.tekwill.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Canvas {
     //are o dependenta privata, finala de tipul Shape, ca pe
     //viitor sa mai poata lucra si cu alte figuri

@@ -1,5 +1,8 @@
 package md.tekwill.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Square implements Shape{
 
     @Override

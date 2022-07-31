@@ -1,5 +1,9 @@
+import Shape.Shape;
+import Shape.TwoDimensionalShape.Circle;
+import Shape.TwoDimensionalShape.Square;
+
 public class ShapeTest {
-    // create Shape objects and display their information
+    // create Shape.Shape objects and display their information
     public static void main( String args[] )
     {
         Shape shapes[] = new Shape[ 4 ];

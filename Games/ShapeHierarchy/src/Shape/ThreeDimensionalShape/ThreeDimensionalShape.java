@@ -1,3 +1,5 @@
+import Shape.Shape;
+
 public abstract class ThreeDimensionalShape implements Shape {
     //Three private instance variables Dimension1 , Dimension2 and Dimension3
     private double Dimension1, Dimension2, Dimension3;

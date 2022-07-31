@@ -15,12 +15,12 @@ public class ProjectConfig {
 
     //creem o instanta si punem in context la Square
     @Bean
-    public Shape shape(){ // trebuie sa ne returneze o instanta a unui obiect
+    public Shape shape() { // trebuie sa ne returneze o instanta a unui obiect
         return new Square();
     }
 
     @Bean
-    public Canvas canvas(){
+    public Canvas canvas() {
         return new Canvas(shape());
     }
 }

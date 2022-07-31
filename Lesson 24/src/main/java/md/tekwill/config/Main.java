@@ -10,7 +10,7 @@ public class Main {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        Canvas canvas  = context.getBean(Canvas.class);
+        Canvas canvas = context.getBean(Canvas.class);
 
         //apelam metoda draw
         canvas.draw();

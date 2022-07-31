@@ -1,5 +1,6 @@
 package md.tekwill.beans;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,7 +9,7 @@ public class Canvas {
     //viitor sa mai poata lucra si cu alte figuri
     private final Shape shape;
     //injectam
-    public Canvas(Shape shape){
+    public Canvas(@Qualifier("circle") Shape shape){  // Shape sa fie de tipul circle
         this.shape = shape;
     }
     // metoda draw, care sa ne afiseze shape-ul in consola

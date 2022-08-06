@@ -6,6 +6,7 @@ import md.tekwill.todo.repository.TaskRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TaskService {
@@ -29,5 +30,17 @@ public class TaskService {
 
     public Task save(Task task) {
         return repository.save(task);
+    }
+    public boolean update(long id, Task task){
+        Optional<Task> byId = Optional.ofNullable(getById(id));
+        if (byId.isEmpty()) {
+            return false;
+        }
+        Task newTask = byId.get();
+        newTask.setCompleted(task.getCompleted());
+        newTask.setDescription(task.getDescription());
+        newTask.setName(task.getName());
+        repository.save(newTask);
+        return  true;
     }
 }
